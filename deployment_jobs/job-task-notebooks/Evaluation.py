@@ -4,6 +4,11 @@
 
 # COMMAND ----------
 
+# MAGIC %pip install git+https://github.com/mlflow/mlflow.git@mlflow-3-latest
+# MAGIC dbutils.library.restartPython()
+
+# COMMAND ----------
+
 dbutils.widgets.text("model_name", "")
 dbutils.widgets.text("model_version", "")
 
