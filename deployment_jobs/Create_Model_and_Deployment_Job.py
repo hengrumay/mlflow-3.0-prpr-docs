@@ -4,6 +4,11 @@
 
 # COMMAND ----------
 
+# MAGIC %pip install git+https://github.com/mlflow/mlflow.git@mlflow-3-latest
+# MAGIC dbutils.library.restartPython()
+
+# COMMAND ----------
+
 # TODO: Update these values as necessary
 model_name = "main.default.example_model"
 job_name = "example_deployment_job"
