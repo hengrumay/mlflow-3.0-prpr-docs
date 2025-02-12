@@ -6,7 +6,7 @@
 
 # COMMAND ----------
 
-# MAGIC %pip install git+https://github.com/mlflow/mlflow.git@mlflow-3-latest langchain langchain-databricks langchain-community databricks-agents
+# MAGIC %pip install git+https://github.com/mlflow/mlflow.git@mlflow-3 langchain langchain-databricks langchain-community databricks-agents
 # MAGIC dbutils.library.restartPython()
 
 # COMMAND ----------
