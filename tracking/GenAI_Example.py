@@ -6,6 +6,7 @@
 
 # COMMAND ----------
 
+# MAGIC %pip uninstall -y mlflow-skinny
 # MAGIC %pip install git+https://github.com/mlflow/mlflow.git@mlflow-3 langchain langchain-databricks langchain-community databricks-agents
 # MAGIC dbutils.library.restartPython()
 
