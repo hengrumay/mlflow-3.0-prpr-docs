@@ -4,6 +4,7 @@
 
 # COMMAND ----------
 
+# MAGIC %pip uninstall -y mlflow-skinny
 # MAGIC %pip install git+https://github.com/mlflow/mlflow.git@mlflow-3
 # MAGIC dbutils.library.restartPython()
 
@@ -17,16 +18,6 @@ job_name = "example_deployment_job"
 evaluation_notebook_path = "/Workspace/Users/your.username@databricks.com/Evaluation"
 approval_notebook_path = "/Workspace/Users/your.username@databricks.com/Approval"
 deployment_notebook_path = "/Workspace/Users/your.username@databricks.com/Deployment"
-
-# COMMAND ----------
-
-# Create registered model
-from mlflow.tracking.client import MlflowClient
-client = MlflowClient(registry_uri="databricks-uc")
-try:
-  client.create_registered_model(model_name)
-except Exception as e:
-  print(e)
 
 # COMMAND ----------
 
@@ -72,3 +63,13 @@ job_settings = jobs.JobSettings(
 
 created_job = w.jobs.create(**job_settings.__dict__)
 job_id = created_job.job_id
+
+# COMMAND ----------
+
+# Create registered model w/ linked deployment job
+from mlflow.tracking.client import MlflowClient
+client = MlflowClient(registry_uri="databricks-uc")
+try:
+  client.create_registered_model(model_name, deployment_job_id=job_id)
+except Exception:
+  print(traceback.format_exc())

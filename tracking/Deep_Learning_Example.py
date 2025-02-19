@@ -6,6 +6,7 @@
 
 # COMMAND ----------
 
+# MAGIC %pip uninstall -y mlflow-skinny
 # MAGIC %pip install git+https://github.com/mlflow/mlflow.git@mlflow-3 torch scikit-learn
 # MAGIC dbutils.library.restartPython()
 
