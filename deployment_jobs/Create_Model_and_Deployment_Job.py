@@ -71,5 +71,5 @@ from mlflow.tracking.client import MlflowClient
 client = MlflowClient(registry_uri="databricks-uc")
 try:
   client.create_registered_model(model_name, deployment_job_id=job_id)
-except Exception as e:
-  print(e)
+except Exception:
+  print(traceback.format_exc())
