@@ -34,7 +34,7 @@ chain = prompt | chat_model
 # As a new feature, the LoggedModel entity is linked to its name and params
 model_info = mlflow.langchain.log_model(
   lc_model=chain,
-  name="basic_chain",
+  artifact_path="basic_chain",
   params={
     "temperature": 0.1,
     "max_tokens": 2000,
