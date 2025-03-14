@@ -12,7 +12,7 @@
 
 # TODO: Update these values as necessary
 model_name = "main.default.example_model"
-job_name = "example_deployment_job"
+job_name = "example_deployment_job" 
 
 # TODO: Create notebooks for each task and populate the notebook path here
 evaluation_notebook_path = "/Workspace/Users/your.username@databricks.com/Evaluation"

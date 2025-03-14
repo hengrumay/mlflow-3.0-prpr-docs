@@ -20,6 +20,15 @@ from torch.utils.data import DataLoader, TensorDataset
 
 # COMMAND ----------
 
+torch.__version__
+
+# COMMAND ----------
+
+import mlflow
+mlflow.__version__
+
+# COMMAND ----------
+
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 
@@ -153,4 +162,5 @@ print(worst_checkpoint.metrics)
 mlflow.register_model(f"models:/{best_checkpoint.model_id}", name="catalog.schema.model_name")
 
 # COMMAND ----------
+
 
