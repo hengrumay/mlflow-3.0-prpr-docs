@@ -129,6 +129,10 @@ with mlflow.start_run():
 
 # COMMAND ----------
 
+
+
+# COMMAND ----------
+
 # MAGIC %md
 # MAGIC This example produced one MLflow Run (training_run) and 11 MLflow Logged Models, one for each checkpoint (at steps 0, 10, …, 100). Using MLflow’s UI or search API, we can get the checkpoints and rank them by their accuracy.
 

@@ -56,14 +56,14 @@ deployment_notebook_path = f"/Workspace/Users/{username}/Deployment"
 #                 base_parameters={"approval_tag_name": "{{task.name}}"}
 #             ),
 #             depends_on=[jobs.TaskDependency(task_key="Evaluation")],
-#             disable_auto_optimization=True,
+#             #disable_auto_optimization=True,
 #             max_retries=0,
 #         ),
 #         jobs.Task(
 #             task_key="Deployment",
 #             notebook_task=jobs.NotebookTask(notebook_path=deployment_notebook_path),
 #             depends_on=[jobs.TaskDependency(task_key="Approval_Check")],
-#             disable_auto_optimization=True,
+#             #disable_auto_optimization=True,
 #             max_retries=0,
 #         ),
 #     ],

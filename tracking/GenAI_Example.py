@@ -52,6 +52,10 @@ print(logged_model.model_id, logged_model.params)
 
 # COMMAND ----------
 
+logged_model.model_id, logged_model.params
+
+# COMMAND ----------
+
 # MAGIC %md
 # MAGIC Then, we will interactively query the chain in a notebook to make sure that it’s viable enough for further testing. These traces can be viewed in UI, under the Traces tab of the model details page.
 
@@ -125,4 +129,16 @@ with mlflow.start_run() as evaluation_run:
 
 # COMMAND ----------
 
-mlflow.register_model(logged_model.model_uri, name="catalog.schema.model")
+catalog = "mmt"
+schema = "mlflow_v3_assessbrickready"
+model_name = "genai_eval_dataset"
+model_fullname = f"{catalog}.{schema}.{model_name}"
+
+# COMMAND ----------
+
+# mlflow.register_model(logged_model.model_uri, name="catalog.schema.model")
+mlflow.register_model(logged_model.model_uri, name=model_fullname)
+
+# COMMAND ----------
+
+
