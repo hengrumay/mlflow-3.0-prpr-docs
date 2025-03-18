@@ -13,7 +13,8 @@ model_name = dbutils.widgets.get("model_name")
 model_version = dbutils.widgets.get("model_version")
 
 # TODO: Enter serving endpoint name
-serving_endpoint_name = model_name.replace('.', '-') + "-serving-endpoint"
+# serving_endpoint_name = model_name.replace('.', '-') + "-serving-endpoint"
+serving_endpoint_name = model_name.replace('.', '-') + "-ep"
 
 # COMMAND ----------
 
