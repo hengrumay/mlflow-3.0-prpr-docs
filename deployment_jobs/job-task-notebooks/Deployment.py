@@ -13,7 +13,7 @@ model_name = dbutils.widgets.get("model_name")
 model_version = dbutils.widgets.get("model_version")
 
 # TODO: Enter serving endpoint name
-serving_endpoint_name = model_name + "-serving-endpoint"
+serving_endpoint_name = model_name.replace('.', '-') + "-serving-endpoint"
 
 # COMMAND ----------
 
@@ -33,6 +33,7 @@ served_entities=[
   )
 ]
 
+# Update serving endpoint if it already exists, otherwise create the serving endpoint
 try:
   w.serving_endpoints.update_config(name=serving_endpoint_name, served_entities=served_entities)
 except ResourceDoesNotExist:
