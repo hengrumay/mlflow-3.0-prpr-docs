@@ -164,8 +164,9 @@ mlflow.get_logged_model(logged_model.model_id).to_dictionary()
 # COMMAND ----------
 
 catalog = "mmt"
-schema = "mlflow_v3_assessbrickready"
-model_name = 'traditionalML_elasticnet' ## not sure if we are supposed to use the same name (which seems like a model type) in the model logging 
+# schema = "mlflow_v3_assessbrickready" ## updated but still encountering 
+# model_name = 'traditionalML_elasticnet' ## not sure if we are supposed to use the same name (which seems like a model type) in the model logging 
+model_name = "tradml_enet"
 
 # COMMAND ----------
 

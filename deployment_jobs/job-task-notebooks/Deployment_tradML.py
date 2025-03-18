@@ -11,7 +11,8 @@
 
 catalog = "mmt"
 schema = "mlflow_v3_assessbrickready"
-model_fullname = f"{catalog}.{schema}.traditionalML_elasticnet"
+# model_fullname = f"{catalog}.{schema}.traditionalML_elasticnet"
+model_fullname = f"{catalog}.{schema}.tradml_enet" ## updated model name
 
 # COMMAND ----------
 
